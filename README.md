@@ -1,4 +1,3 @@
-# reft
 Sample project to learn Python, Flask, and NLTK.
 REFT (Relational Extraction Flask Tool) is a simple web
 application to upload documents and text and to record
