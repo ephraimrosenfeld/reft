@@ -10,7 +10,7 @@ app.config.from_object(__name__) # load config from this file , reft.py
 
 # Load default config and override config from an environment variable
 app.config.update(dict(
-    DATABASE=os.path.join(app.root_path, 'C:\\Users\\ephra\\workspace\\reft\\reft.db'),
+    DATABASE=os.path.join(app.root_path, 'C:\\Users\\ephra\\git\\reft\\reft\\reft.db'),
     DEBUG=True,
     SECRET_KEY='development key',
     USERNAME='admin',
@@ -66,6 +66,7 @@ def show_entities():
     db          = get_db()
     cur         = db.execute('select subject, object from relation_entities order by id desc')
     entities    = cur.fetchall()
+    print('entities from db: ' + str(len(entities)))
     return render_template('show_entities.html', entities=entities)
 
 

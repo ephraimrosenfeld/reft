@@ -51,7 +51,9 @@ def get_rel(tokens, tree, sub_precedes_obj):
             token_index = token_index + 1
             if subj_found and obj_found: #match found
                 return RelationalEntity(sub_type, obj_type, sub, obj)
-        else:
+        elif subj_found or obj_found:
+            return None
+        else :
             continue
     return None   
 

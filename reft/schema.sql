@@ -19,3 +19,4 @@ insert into relations(subject, object) values('PERSON',			'LOCATION');
 insert into relations(subject, object) values('GPE',			'LOCATION');
 insert into relations(subject, object) values('PERSON',			'ORGANIZATION');
 insert into relations(subject, object) values('PERSON',			'GPE');
+insert into relations(subject, object) values('ORGANIZATION',	'GPE');
