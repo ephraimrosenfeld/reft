@@ -75,7 +75,7 @@ def add_entry():
     db          = get_db()
     entities    = rel_extract.findrelations(request.form['text'])
     for ent in entities:
-        db.execute('insert into relation_entities (subject, object, relations_id)  select ?, ?, id from relations where subject=? and object=?', 
+        db.execute('insert into relation_entities (subject, object, relation_type_id)  select ?, ?, id from relation_type where subject=? and object=?', 
                    [ent.subj, ent.obj, ent.subj_type, ent.obj_type])
     db.commit()
     flash('New entry was successfully posted')
